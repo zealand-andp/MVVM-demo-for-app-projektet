@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".view.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"
+        android:text="Dette felt opdaterer ViewModel:"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="50dp"
+        android:ems="10"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="347dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="50dp"
+        android:ems="10"
+        android:text="Dette felt abonnerer på data fra ViewModel:"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="347dp" />
+
+    <TextView
+        android:id="@+id/textViewA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="50dp"
+        android:ems="10"
+        android:text=""
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="347dp" />
+
+</FrameLayout>
