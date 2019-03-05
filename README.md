@@ -1,4 +1,4 @@
-# MVVM Demo for app-projektet
+# MVVM Demo for [app-projektet](https://github.com/sainsh/HOEK-helper)
 
 Denne demo viser step-by, hvordan I kan bygge en app med MVVM arkitektur. App'en funktion er simpel: Den viser en den selvsamme tekst, som brugeren indtaster. Det er ikke meget i sig selv, men det er et godt eksempel på, hvordan data strømmer fra en activity til en viewmodel, og derfra til model, og tilbage. 
 
