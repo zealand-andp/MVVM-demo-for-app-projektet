@@ -7,9 +7,10 @@ Viewet observerer string "a" i ViewModellen, og ViewModellen observerer den selv
 
 ## Sådan kan du bygge dit eget MVVC
 * [Begynd med at se denne video (Introduction to MVVM on Android)](https://www.youtube.com/watch?v=_T4zjIEkGOM) 
+* [Læs i dokumentationen, hvad LiveData klassen kan gøre for dig](https://developer.android.com/topic/libraries/architecture/livedata)
 * Hent mit projekt fra [Github](https://github.com/andracs/MVVM-demo-for-app-projektet)
 * Se på mine TODO noter i projektet
-** Det vil guide dig igennem de nødvendige skridt for at implementere MVVM i din app
+  * Det vil guide dig igennem de nødvendige skridt for at implementere MVVM i din app
 * Når du har forstået konceptet, kan du prøve at implementere noget lignende i din applikation.
 
 ## Todo-listen
