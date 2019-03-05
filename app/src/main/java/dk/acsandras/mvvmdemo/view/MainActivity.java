@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start,
                                       int before, int count) {
                 if(s.length() != 0)
-                    viewModel.setCurrentName(s.toString());
+                    viewModel.setA(s.toString());
             }
         });
 
@@ -59,16 +59,16 @@ public class MainActivity extends AppCompatActivity {
 
 
         // TODO (11) Create the observer which updates the UI.
-        final Observer<String> nameObserver = new Observer<String>() {
+        final Observer<String> stringObserver = new Observer<String>() {
             @Override
-            public void onChanged(@Nullable final String newName) {
+            public void onChanged(@Nullable final String a) {
                 // Update the UI, in this case, a TextView.
-                textView.setText(newName);
+                textView.setText(a);
             }
         };
 
         // TODO (12) Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
-        viewModel.getCurrentName().observe(this, nameObserver);
+        viewModel.getA().observe(this, stringObserver);
 
     }
 

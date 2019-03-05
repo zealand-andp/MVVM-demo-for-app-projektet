@@ -33,7 +33,7 @@
         android:layout_marginTop="250dp"
         android:layout_marginLeft="50dp"
         android:ems="10"
-        android:text="Dette felt abonnerer på data fra ViewModel:"
+        android:text="Dette felt abonnerer på live-data fra ViewModel:"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="130dp"
