@@ -1,9 +1,9 @@
 # MVVM Demo for [app-projektet](https://github.com/sainsh/HOEK-helper)
 
-Denne demo viser step-by, hvordan I kan bygge en app med MVVM arkitektur. App'ens funktion er simpel: Den viser en den selvsamme tekst, som brugeren indtaster. Det er ikke meget i sig selv, men det er et godt eksempel på, hvordan data strømmer fra activity til viewmodel, og derfra til model, og tilbage den samme vej. 
+Denne demo viser step-by, hvordan I kan bygge en app med MVVM arkitektur. App'ens funktion er simpel: Den viser den selvsamme tekst, som brugeren indtaster. Det er ikke meget i sig selv, men det er et godt eksempel på, hvordan data strømmer fra activity til viewmodel, og derfra til model, og tilbage den samme vej. 
 
 ## Sådan virker det
-Viewet observerer string "a" i ViewModellen, og ViewModellen observerer den selvsamme string "a" i modellen. Man kan ændre stringen i Viewet (dvs. i main activity), og denne ændring vil sendes til ViewModel og derfra til Model. 
+Viewet observerer string "a" i ViewModellen, og ViewModellen observerer den selvsamme string "a" i modellen. Man kan ændre stringen i Viewet (dvs. i main activity), og denne ændring vil sendes til ViewModel og derfra til Model, som vil sende data tilbage den anden vej. 
 
 ## Sådan kan du bygge dit eget MVVC
 * [Begynd med at se denne video (Introduction to MVVM on Android)](https://www.youtube.com/watch?v=_T4zjIEkGOM) 
