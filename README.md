@@ -11,3 +11,6 @@ Viewet observerer string "a" i ViewModellen, og ViewModellen observerer den selv
 * Se på mine TODO noter i projektet
 ** Det vil guide dig igennem de nødvendige skridt for at implementere MVVM i din app
 * Når du har forstået konceptet, kan du prøve at implementere noget lignende i din applikation.
+
+## Todo-listen
+![Todo](https://github.com/andracs/MVVM-demo-for-app-projektet/blob/82c694f2b2074982abcb9a8681455e9957f0befc/docs/Sk%C3%A6rmbillede%202019-03-05%20kl.%2014.51.48.png?raw=true)
