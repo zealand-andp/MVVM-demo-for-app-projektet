@@ -16,7 +16,7 @@ import androidx.lifecycle.ViewModelProviders;
 import dk.acsandras.mvvmdemo.R;
 import dk.acsandras.mvvmdemo.view.ViewModel;
 
-public class AndoidView extends AppCompatActivity {
+public class AndroidView extends AppCompatActivity {
 
     private ViewModel viewModel;
     private TextView textView;
