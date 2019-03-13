@@ -1,4 +1,4 @@
-package dk.acsandras.mvvmdemo.view;
+package dk.acsandras.mvvmdemo.view.android;
 
 import android.os.Bundle;
 
@@ -14,11 +14,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import dk.acsandras.mvvmdemo.R;
-import dk.acsandras.mvvmdemo.viewmodel.ModelViewModel;
+import dk.acsandras.mvvmdemo.view.ViewModel;
 
-public class MainActivity extends AppCompatActivity {
+public class AndoidView extends AppCompatActivity {
 
-    private ModelViewModel viewModel;
+    private ViewModel viewModel;
     private TextView textView;
 
     @Override
@@ -49,13 +49,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start,
                                       int before, int count) {
-                if(s.length() != 0)
+                if(s != null)
                     viewModel.setA(s.toString());
             }
         });
 
         // TODO (10) Observing the View Model
-        viewModel = ViewModelProviders.of(this).get(ModelViewModel.class);
+        viewModel = ViewModelProviders.of(this).get(ViewModel.class);
 
 
         // TODO (11) Create the observer which updates the UI.
@@ -68,7 +68,8 @@ public class MainActivity extends AppCompatActivity {
         };
 
         // TODO (12) Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
-        viewModel.getA().observe(this, stringObserver);
+        // Delegate assignment of observer to ViewModel
+        viewModel.observeA(this, stringObserver);//getA().observe(this, stringObserver);
 
     }
 
