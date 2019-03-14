@@ -1,5 +1,7 @@
 package dk.acsandras.mvvmdemo.model;
 
+import java.util.Observer;
+
 public class Model {
 
     // TODO (2) Konverter dine datafelter fra primitive variable som f.eks. double til LiveData
@@ -7,6 +9,7 @@ public class Model {
     // dette felt, og de klasser vil så kunne opdatere data automatiskt.
     // Se dette forklaret i https://developer.android.com/topic/libraries/architecture/livedata
     private String a = new String(); // Før var det "private String a;"
+    private ObserverManager observerManager = new ObserverManager();
 
     // TODO (3) Lav getters og setters og evt. en constructor for din data
     public Model() {
@@ -22,6 +25,15 @@ public class Model {
 
     public void setA(String a) {
         this.a = a;
+        observerManager.notifyObservers(this);
+    }
+
+    public void observe(Observer observer) {
+        observerManager.addObserver(observer);
+    }
+
+    public void unobserve(Observer observer) {
+        observerManager.deleteObserver(observer);
     }
 
 }
