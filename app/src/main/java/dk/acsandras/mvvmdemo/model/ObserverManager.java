@@ -1,18 +1,26 @@
 package dk.acsandras.mvvmdemo.model;
 
-import java.util.Observable;
+import java.util.ArrayList;
 
-public class ObserverManager extends Observable {
+public class ObserverManager {
+    private Observable observable;
+    private ArrayList<Observer> observers = new ArrayList<>();
 
-    /**
-     * Overrides the original {@link Observable#notifyObservers}
-     * and forces a notification regardless of changed-state.
-     *
-     * @param object that is being observed
-     */
-    @Override
-    public void notifyObservers(Object object) {
-        super.setChanged();
-        super.notifyObservers(this);
+    public ObserverManager(Observable observable) {
+        this.observable = observable;
+    }
+
+    public void notifyObservers() {
+        for (Observer observer : observers) {
+            observer.update(observable);
+        }
+    }
+
+    public void addObserver(Observer observer) {
+        observers.add(observer);
+    }
+
+    public void deleteObserver(Observer observer) {
+        observers.remove(observer);
     }
 }

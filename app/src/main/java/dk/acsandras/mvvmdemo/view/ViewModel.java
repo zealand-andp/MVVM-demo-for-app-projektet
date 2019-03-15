@@ -3,14 +3,13 @@ package dk.acsandras.mvvmdemo.view;
 
 import android.util.Log;
 
-import java.util.Observable;
-
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import dk.acsandras.mvvmdemo.model.Model;
+import dk.acsandras.mvvmdemo.model.Observable;
 
-public class ViewModel extends androidx.lifecycle.ViewModel implements java.util.Observer {
+public class ViewModel extends androidx.lifecycle.ViewModel implements dk.acsandras.mvvmdemo.model.Observer {
 
     // TODO (4) ViewModel skal også bruge LiveData, som de forskellige activities kan observere
     // ViewModel er også løst koblet på modellen, dvs. modellen har ikke kendskab til ViewModel
@@ -39,7 +38,7 @@ public class ViewModel extends androidx.lifecycle.ViewModel implements java.util
     }
 
     @Override
-    public void update(Observable o, Object arg) {
+    public void update(Observable observable) {
         //if (arg == model)
         currentA.setValue(model.getA());
     }
